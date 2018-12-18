@@ -1,22 +1,22 @@
 # MCTI
 
-Masbate Central Technical Institute website project
-Uses website based on YelpCamp tutorial on Udemy
+Masbate Central Technical Institute website project<br/>
+Uses website based on YelpCamp tutorial on Udemy<br/>
 
-to install:
-cp .env.bak .env
-nano .env
-fill out the necessary info with no quotes 
-delete PORT and IP if using cloud9
+to install:<br/>
+cp .env.bak .env<br/>
+nano .env<br/>
+fill out the necessary info with no quotes <br/>
+delete PORT and IP if using cloud9<br/>
 
-PORT=
-IP=
-DB_URI=
-SECRET=
+PORT= <br/>
+IP= <br/>
+DB_URI= <br/>
+SECRET= <br/>
 
-secret is the session secret to encrypt user sessions
-add a phrase such as Once again suki wins cutest dog!
+secret is the session secret to encrypt user sessions<br/>
+add a phrase such as Once again suki wins cutest dog!<br/>
 
-npm install
+npm install<br/>
 
-open terminal and run node app.js
+open terminal and run node app.js<br/>
