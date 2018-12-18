@@ -1,0 +1,20 @@
+"echo \"Error: no test specified\" && exit 1"
+commentSchema.pre('remove', function(next) {
+    // Remove all the assignment docs that reference the removed person.
+    this.model('image').remove({ comment: this._id }, next);
+});
+
+Picture ratio for landing page
+921.5 * 614.5 / 3686 x 2458
+72 dpi
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+npm install -g nodemon
+nodemon app.js
+//restarts server for every change
+
+npm install -g localtunnel
+run node app.js in one terminal and on another:
+lt --port 8080 --subdomain mcti
+your url is: https://mcti.localtunnel.me

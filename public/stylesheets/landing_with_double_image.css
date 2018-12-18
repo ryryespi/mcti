@@ -1,0 +1,203 @@
+.mcti-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mcti-buffer {
+    height: 30vh;
+}
+
+.mcti-width {
+    width: 100vw;
+}
+
+.mcti-height {
+    height: 90vh;
+}
+
+.mcti-content {
+    width: 100vw;
+    height: 90vh;
+}
+
+.mcti-ul {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.mcti-color {
+    background-color: black;
+}
+
+.mcti-message {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+#landing-header h1 {
+    color: #fff;
+}
+
+.landing-message {
+    background-color: rgba(11, 95, 49, .7);
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.slideshow2 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    top: 17vh;
+    left: 0;
+    background-size: contain;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: imageAnimation 50s linear infinite;
+    z-index: 0;
+}
+
+.slideshow2 li {
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    top: 18vh;
+    left: 0;
+    background-size: contain;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: imageAnimation 50s linear infinite;
+    z-index: 0;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1
+    }
+    30% {
+        opacity: 0
+    }
+}
+
+*/
+/* Older browser support - class added by modernizr */
+
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url("../images/logo.jpg");
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url("../images/group.jpg");
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url("../images/staffGroup.jpg");
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url("../images/staff.jpg");
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url("../images/info.jpg");
+    animation-delay: 40s;
+}
+
+.no-cssanimations .slideshow2 li {
+    opacity: 1;
+}
+
+.slideshow2 li:nth-child(1) {
+    background-image: url("../images/info.jpg");
+}
+
+.slideshow2 li:nth-child(5) {
+    background-image: url("../images/group.jpg");
+    animation-delay: 40s;
+}
+
+.slideshow2 li:nth-child(4) {
+    background-image: url("../images/staffGroup.jpg");
+    animation-delay: 30s;
+}
+
+.slideshow2 li:nth-child(3) {
+    background-image: url("../images/staff.jpg");
+    animation-delay: 20s;
+}
+
+.slideshow2 li:nth-child(2) {
+    background-image: url("../images/logo.jpg");
+    animation-delay: 10s;
+}
+
+
+/*
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 1.76rem;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    top: 1.76rem;
+    left: 0;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+*/

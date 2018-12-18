@@ -1,0 +1,92 @@
+<% include ../partials/header %>
+
+    <body>
+
+        <div class="container">
+
+
+            <h1 class="jumbotron">
+                Gallery Image
+            </h1>
+
+            <div class="row justify-content-center">
+
+
+                <div class="card" style="width:50rem">
+
+                    <p class="h1 card-header ">
+                        <%= image.name.charAt(0).toUpperCase() + image.name.slice(1)%>
+                    </p>
+
+                    <img class="card-img-top" src="<%= image.image %>">
+
+                    <p class="card-body">
+                        <%= image.description.charAt(0).toUpperCase() + image.description.slice(1)%>
+                    </p>
+                    <div class="card-footer"></div>
+                    <div class="w-100 p-1 row ">
+                        <div class="col-1">
+                            <a class="btn btn-success" href="/gallery/<%= image._id %>/edit">Edit</a>
+                        </div>
+                        <div class="col-1">
+                            <form action="/gallery/<%= image._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                        <div class="col-7"></div>
+                        <div class="col-3">
+                            <p class="text-right"><em> Submitted By </em>
+                                <%= image.author.username %>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="w-75 mb-5 ">
+
+                    <div class="mt-5 row card-header mx-4">
+                        <div class="pl-5 col-9">
+                            <p class="h2">Comments</p>
+                        </div>
+                        <div class="col-2">
+                            <p>
+                                <a class="btn btn-success" href="/gallery/<%= image._id %>/comments/new">Add New Comment</a>
+                            </p>
+                        </div>
+
+                        <div class="w-100 card-body">
+                            <div class="row px-4">
+                                <div class=" col-12">
+                                    <% image.comments.forEach(function(comment){%>
+                                        <p>
+                                            <strong class="h5"><%= comment.author.username %></strong> -
+                                            <%= comment.text %>
+                                        </p>
+                                        <%});%>
+                                </div>
+                                <div class="mt-2 pt-2 col-3">
+                                    <a class="btn btn-success" href="/gallery">Back to Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </body>
+
+    <% include ../partials/footer %>

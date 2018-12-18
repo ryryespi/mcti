@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+    <body>
+        <h1>Edit
+            <%= image.name %>
+        </h1>
+
+        <form action="/gallery/<%= image._id %>?_method=PUT" method="POST">
+            <input type="text" name="newImage[name]" value="<%= image.name %>">
+            <input type="text" name="newImage[image]" value="<%= image.image %>">
+            <input type="text" name="newImage[description]" value="<%= image.description %>">
+            <button>Submit</button>
+        </form>
+        <a href="/gallery">Go To Gallery</a>
+    </body>
+    <% include ../partials/footer %>
